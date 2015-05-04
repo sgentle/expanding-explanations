@@ -1,0 +1,77 @@
+<!doctype html>
+<head>
+<style>
+  ee-summary {
+    display: inline;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+  }
+  ee-details {
+    display: none;
+  }
+  ee-summary.expanded {
+    display: none;
+  }
+  ee-summary.expanded + ee-details {
+    display: inline;
+  }
+  para {
+    display: block;
+    margin: 1em 0;
+  }
+</style>
+<body>
+  This is an <ee-summary>Expanding Explanation.</ee-summary>
+    <ee-details>
+      Expanding Explanation. An expanding explanation is a way of explaining a <ee-summary>complicated concept</ee-summary>
+        <ee-details>complicated concept (particularly, one that has a lot of distinct parts)</ee-details>
+      in a <ee-summary>top-down way.</ee-summary>
+        <ee-details>
+          top-down way, meaning that it starts with more general ideas and allows you to work your way down to more specific ones.
+        </ee-details>
+
+      <para>
+        It has a <ee-summary>few advantages over traditional explanations.</ee-summary>
+        <ee-details>few advantages over traditional explanations: you can skip over expansions that aren't relevant to you, explore them at a suitable pace and in whatever order you like, and most importantly it's fun to click on things.</ee-details>
+        But there are <ee-summary>some disadvantages too.</ee-summary>
+        <ee-details>some disadvantages too: you can't quickly scan through the entire text without expanding it, the expansion state doesn't save so if you come back you have to start over, and it takes more effort to write.</ee-details>
+      </para>
+
+      <para>All up, I think <ee-summary>it could be useful for certain situations.</ee-summary>
+        <ee-details>the concept may not be useful in every situation, but there are times when it could make understanding a complicated set of ideas easier and more fun.</ee-details>
+        Error pages, <ee-summary>for example.</ee-summary>
+        <ee-details>for example:
+          <para style="margin-left: 1em">
+            <ee-summary>This webpage is not available.</ee-summary>
+            <ee-details>
+              This webpage cannot be loaded because the <ee-summary>DNS lookup failed.</ee-summary>
+              <ee-details>
+                DNS lookup failed. DNS (Domain Name System) is a system that matches a
+                  <ee-summary>domain name</ee-summary><ee-details>domain name (a human-readable website name like google.com)</ee-details>
+                to an
+                  <ee-summary>IP address.</ee-summary><ee-details>IP address (a number like 8.8.8.8 used by computers to route traffic on the internet).</ee-details>
+              </ee-details>
+              This is probably due to <ee-summary>typing in the wrong address</ee-summary>
+                <ee-details>typing in the wrong address, which causes the DNS lookup to fail because it's looking for a website that doesn't exist,</ee-details>
+              or a <ee-summary>problem with your internet connection.</ee-summary>
+              <ee-details>problem with your internet connection, which prevents the DNS lookup from reaching the internet at all.</ee-details>
+              You can try again later or go through some <ee-summary>troubleshooting steps.</ee-summary>
+              <ee-details>troubleshooting steps:
+              <ul>
+                <li>Make sure you entered the website address correctly.
+                <li>Check if you can visit other websites. If not, your internet may be down.
+                <li>Try restarting your router and turning your wifi off and back on.
+              </ul
+              </ee-details>
+            </ee-details>
+          </para>
+        </ee-details>
+      </para>
+    </ee-details>
+
+  <script>
+    document.addEventListener('click', function(e){
+      if (e.target.tagName == 'EE-SUMMARY') e.target.classList.add('expanded');
+    });
+  </script>
+</body>
